@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_dropdown_menu_icon"
+        android:orderInCategory="100"
+        android:title="menu"
+        android:icon="@drawable/arrow_drop_down_icon"
+        app:showAsAction="always">
+
+        <menu>
+
+            <item
+                android:id="@+id/action_us"
+                android:title="US"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_tr"
+                android:title="TR"
+                app:showAsAction="never" />
+
+
+        </menu>
+
+
+    </item>
+
+</menu>

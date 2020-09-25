@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "990242389963",
+    "firebase_url": "https://newsprojectkotlin.firebaseio.com",
+    "project_id": "newsprojectkotlin",
+    "storage_bucket": "newsprojectkotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990242389963:android:88d428f814f45fc4f2004e",
+        "android_client_info": {
+          "package_name": "com.ozgurberat.newsprojectkotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "990242389963-agoqit21u726o6505qvjip7ur22p85hd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGoMXD0MahwzjluoY4QoAsZpQX18QY4gU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "990242389963-agoqit21u726o6505qvjip7ur22p85hd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
