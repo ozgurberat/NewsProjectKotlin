@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+
+    <EditText
+        android:id="@+id/delete_account_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete_account_message" />
+
+    <TextView
+        android:id="@+id/delete_account_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/BLACK"
+        android:text="@string/delete_account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/delete_account_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are you sure you want to permanently delete this account? If so, please type ''delete'' to confirm."
+        android:textColor="@color/BLACK"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete_account_title" />
+
+    <Button
+        android:id="@+id/delete_account_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:text="Cancel"
+        android:textColor="@color/BLACK"
+        app:layout_constraintEnd_toStartOf="@+id/delete_account_delete_button"
+        app:layout_constraintTop_toBottomOf="@+id/delete_account_edittext" />
+
+    <Button
+        android:id="@+id/delete_account_delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/RED"
+        android:text="Delete"
+        android:textColor="@color/WHITE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete_account_edittext" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

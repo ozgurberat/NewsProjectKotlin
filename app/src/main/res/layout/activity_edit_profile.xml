@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".view.main.profile.EditProfileActivity"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/edit_profile_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="?android:attr/actionBarSize"
+                    android:text="@string/edit_profile"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/BLACK"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:text="Name:        "
+            android:textSize="20sp"
+            android:textColor="@color/BLACK"
+            android:textStyle="bold"
+            android:paddingVertical="8dp"
+            android:paddingStart="10dp"
+            android:background="@drawable/custom_profile_edittext"
+            android:layout_gravity="center_vertical">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/edit_profile_name_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/custom_profile_edittext"
+            android:textColorHint="@color/BLACK"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+        </EditText>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:text="Surname:  "
+            android:background="@drawable/custom_profile_edittext"
+            android:textSize="20sp"
+            android:textColor="@color/BLACK"
+            android:textStyle="bold"
+            android:paddingStart="10dp"
+            android:paddingVertical="8dp"
+            android:layout_gravity="center_vertical">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/edit_profile_surname_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/custom_profile_edittext"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+        </EditText>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_profile_edittext">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingVertical="8dp"
+            android:text="Notifications"
+            android:textColor="@color/BLACK"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/notifications_button"
+            android:layout_width="55dp"
+            android:layout_height="63dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/edit_profile_change_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_profile_edittext"
+        android:textColorHint="@color/RED"
+        android:hint="@string/change_password"
+        android:paddingStart="10dp"
+        android:textSize="16sp"
+        android:padding="15dp"
+        android:layout_gravity="center_vertical"
+
+        android:paddingEnd="10dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/edit_profile_delete_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_profile_edittext"
+        android:textColorHint="@color/RED"
+        android:hint="@string/delete_account"
+        android:paddingStart="10dp"
+        android:textSize="16sp"
+        android:padding="15dp"
+        android:layout_gravity="center_vertical"
+
+        android:paddingEnd="10dp">
+
+    </TextView>
+
+    <ProgressBar
+        android:id="@+id/edit_profile_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:visibility="gone">
+
+    </ProgressBar>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/edit_profile_save_button"
+        android:layout_width="108dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_save_button"
+        android:src="@drawable/next_icon"
+        android:text="Save"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        android:textAllCaps="false"
+        android:textColor="@color/WHITE"
+        android:textSize="18sp">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
