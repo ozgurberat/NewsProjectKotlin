@@ -20,6 +20,31 @@
                 android:id="@+id/action_tr"
                 android:title="TR"
                 app:showAsAction="never" />
+            <item
+                android:id="@+id/action_ru"
+                android:title="RU"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_de"
+                android:title="DE"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_fr"
+                android:title="FR"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_cn"
+                android:title="CN"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_il"
+                android:title="IL"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_it"
+                android:title="IT"
+                app:showAsAction="never" />
+
 
 
         </menu>

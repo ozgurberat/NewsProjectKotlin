@@ -7,8 +7,11 @@
     <color name="BLACK">#212121</color>
     <color name="BLUE">#2196f3</color>
     <color name="WHITE">#FFFFFF</color>
-    <color name="GRAY">#f5f5f5</color>
+    <color name="WHITE_GRAY">#fafafa</color>
     <color name="PINK">#ec407a</color>
     <color name="PINK_DARK">#ad1457</color>
+    <color name="RED">#EA2020</color>
+    <color name="GREEN">#79C538</color>
+    <color name="GRAY">#4DFAFAFA</color>
 
 </resources>

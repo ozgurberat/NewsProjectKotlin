@@ -1,47 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="200dp">
+    android:layout_height="250dp">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:strokeColor="@color/BLACK"
+        app:strokeWidth="0.3dp"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/card_others">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="12dp"
             android:orientation="horizontal"
-            android:weightSum="5"
-            android:layout_margin="12dp">
+            android:weightSum="5">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/card_others_image"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/android_placeholder"
+                android:layout_weight="1.5"
                 android:scaleType="centerCrop"
-                android:layout_weight="1.5">
+                android:src="@drawable/android_placeholder">
 
             </androidx.appcompat.widget.AppCompatImageView>
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:layout_margin="12dp"
                 android:layout_weight="3.5"
-                android:weightSum="3"
-                android:layout_margin="12dp">
+                android:orientation="vertical"
+                android:weightSum="3">
 
                 <TextView
                     android:id="@+id/card_others_title"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
                     android:layout_weight="2"
+                    android:padding="8dp"
                     android:text="Title... test test....."
                     android:textColor="@color/BLACK"
-                    android:textStyle="bold"
-                    android:textSize="16sp">
+                    android:textSize="16sp"
+                    android:textStyle="bold">
 
                 </TextView>
 
@@ -49,8 +56,9 @@
                     android:id="@+id/card_others_publication_date"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:padding="8dp"
                     android:text="Published at: test.......">
 
                 </TextView>
