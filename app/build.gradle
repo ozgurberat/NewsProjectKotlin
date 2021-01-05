@@ -101,6 +101,10 @@ dependencies {
     def firebase_firestore_version = "21.6.0"
     implementation "com.google.firebase:firebase-firestore-ktx:$firebase_firestore_version"
 
+    //Scalable DP&SP
+    def intuit_version = "1.0.6"
+    implementation "com.intuit.sdp:sdp-android:$intuit_version"
+    implementation "com.intuit.ssp:ssp-android:$intuit_version"
 
 }
 

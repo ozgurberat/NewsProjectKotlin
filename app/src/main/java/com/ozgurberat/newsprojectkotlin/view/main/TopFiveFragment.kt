@@ -109,6 +109,7 @@ class TopFiveFragment : Fragment(), TopFiveRecyclerAdapter.NewsListener {
             mAuth.currentUser!!.uid,
             Context.MODE_PRIVATE
         )
+
         val name = sharedPreferences!!.getString("name", "")
         val surname = sharedPreferences.getString("surname", "")
 

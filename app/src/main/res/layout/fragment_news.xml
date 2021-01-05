@@ -6,9 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.main.NewsFragment"
-    android:background="@color/WHITE_GRAY"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp">
+    android:background="@color/WHITE_GRAY">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -23,15 +21,13 @@
 
             <TextView
                 android:id="@+id/textView6"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:layout_marginStart="16dp"
                 android:fontFamily="@font/nunito_bold"
+                android:gravity="center"
                 android:text="@string/the_latest_news_for_your_interests"
-                android:textSize="22sp"
-                android:textColor="@color/BLACK"
-                android:layout_marginBottom="24dp"/>
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/BLACK"/>
 
         </androidx.appcompat.widget.Toolbar>
 

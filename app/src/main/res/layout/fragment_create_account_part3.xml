@@ -6,16 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".view.login.CreateAccountPart3Fragment">
 
-
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_24sdp"
         android:text="Almost Done!"
         android:textColor="@color/BLACK"
-        android:textSize="28sp"
+        android:textSize="@dimen/_20ssp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,10 +23,10 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="81dp"
+        android:layout_marginTop="@dimen/_25sdp"
         android:text="@string/please_verify_your_email"
         android:textColor="@color/BLACK"
-        android:textSize="20sp"
+        android:textSize="@dimen/_14ssp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -36,12 +35,13 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="350dp"
-        android:layout_height="149dp"
-        android:layout_marginTop="33dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24sdp"
         android:text="@string/verification_text"
         android:textColor="@color/BLACK"
-        android:textSize="18sp"
+        android:textSize="@dimen/_14ssp"
+        android:padding="@dimen/_12sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,9 +49,9 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/back_to_the_login_screen"
-        android:layout_width="338dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_25sdp"
         android:background="@drawable/custom_login_button"
         android:text="@string/i_understand_login_now"
         android:textAllCaps="false"

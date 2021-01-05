@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".view.main.TopFiveFragment"
     android:background="@color/WHITE_GRAY"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp">
+    tools:context=".view.main.TopFiveFragment">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/WHITE_GRAY">
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/welcome_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_16sdp"
             android:text="@string/text_welcome"
-            android:textSize="16sp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp">
+            android:textSize="@dimen/_12ssp">
 
         </TextView>
 
@@ -30,59 +32,53 @@
             android:id="@+id/toolbar_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
             android:text="Ozgur Berat"
             android:textColor="@color/BLACK"
-            android:textSize="24sp"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="4dp">
+            android:textSize="@dimen/_18ssp">
 
         </TextView>
+
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/fragment_top_five_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/BLUE"
-            android:layout_marginTop="12dp">
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@color/BLUE">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Today's Top 5"
-                    android:textColor="@color/WHITE"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    android:textColor="@color/WHITE">
 
                 </TextView>
 
                 <TextView
                     android:id="@+id/country_text_view"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="4dp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:gravity="end"
                     android:text="USA"
-                    android:textColor="@color/WHITE"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    android:textColor="@color/WHITE">
 
                 </TextView>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
         </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/fragment_top_five_recycler"
@@ -94,39 +90,34 @@
         </androidx.recyclerview.widget.RecyclerView>
 
 
-    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ProgressBar
+        android:id="@+id/top_five_progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ProgressBar
-            android:id="@+id/top_five_progress"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/top_five_couldnt_find"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sorry_we_couldn_t_find_any_results_for_your_search"
+        android:textColor="@color/BLACK"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/top_five_couldnt_find"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sorry_we_couldn_t_find_any_results_for_your_search"
-            android:textColor="@color/BLACK"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+    </TextView>
 
-        </TextView>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
